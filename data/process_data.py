@@ -9,5 +9,3 @@ def generate_data():
     # Schuffle data so train/test split is random
     np.random.shuffle(data)
     return data
-
-print(generate_data().shape[0])
