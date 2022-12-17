@@ -10,7 +10,8 @@ def compute_cost(x_train, y_train, w, b):
 
 def compute_gradient(x_train, y_train, w, b):
     m = x_train.shape[0]
-    # dw, db represent derivatives of the Cost Function wrt parameters w and b
+    # dw, db represent partial derivatives of the Cost Function 
+    # with respect to its parameters w and b
     dw, db = 0, 0
     for i in range(m):
         dw += (w*x_train[i] + b - y_train[i])*x_train[i]
