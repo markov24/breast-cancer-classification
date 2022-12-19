@@ -5,6 +5,7 @@ def generate_data():
     # Convert raw data into a NumPy array
     with open('data/tumor_data.txt', 'r') as f:
         data = np.array([[e for e in line.split(',')] for line in f])
+    np.random.shuffle(data)
 
     X = np.array(data[:, 2:12], dtype=float)
     y = np.array(data[:, 1])

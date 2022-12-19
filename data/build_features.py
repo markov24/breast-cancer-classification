@@ -35,15 +35,15 @@ def training_data(X, y, features, train=0.9, model=1):
     # Select cutoff
     cutoff = round(train*X.shape[0])
 
-    X_train = np.array(X[:cutoff, :features], dtype=float)
-    X_test = np.array(X[cutoff:, :features], dtype=float)
-
     # Select chosen model and normalize
     if model==2:
-        X_train = square_model(X_train)
+        X = square_model(X)
     elif model==3:
-        X_train = cubic_model(X_train)
-    X_train = normalize(X_train)
+        X = cubic_model(X)
+    X = normalize(X)
+
+    X_train = np.array(X[:cutoff, :features], dtype=float)
+    X_test = np.array(X[cutoff:, :features], dtype=float)
 
     y_train = np.array(y[:cutoff])
     y_test = np.array(y[cutoff:])
