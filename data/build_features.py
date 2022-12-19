@@ -1,5 +1,5 @@
 import numpy as np
-import process_data as pd
+from data import process_data as pd
 
 # Build model with x^2 features
 def square_model(X):
