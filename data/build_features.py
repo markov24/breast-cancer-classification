@@ -26,7 +26,7 @@ def normalize(X):
     # mx = np.max(X, axis=0)
     # mn = np.min(X, axis=0)
     std = np.std(X, axis=0)
-    return ((X - mu) / std), mu, std
+    return (X - mu) / std
 
 # Generate training data with two optional parameters:
 #   model: 1-standard, 2-squared, 3-cubic
