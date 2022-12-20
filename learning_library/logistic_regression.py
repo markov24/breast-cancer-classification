@@ -53,6 +53,9 @@ def gradient_descent(iter, X_train, y_train, a, l):
             print(f"Iteration: {i}  Cost: {cost}")
     iter_vec, cost_vec = iter_vec[1:], cost_vec[1:]
     plt.plot(iter_vec, cost_vec)
+    plt.xlabel("Number of Iterations")
+    plt.ylabel("Cost")
+    plt.title("Training Plot")
     plt.show()
     return w_vec, b
 
