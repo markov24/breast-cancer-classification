@@ -1,2 +1,2 @@
 # breast-cancer-classification
-Machine Learning Library built from scratch using NumPy for Breast Cancer Classification
+Breast Cancer Classification using a custom ML library. The library was built in Python with NumPy, and includes the following: linear regression, multiple regression and logistic regression.
